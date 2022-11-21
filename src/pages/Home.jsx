@@ -1,34 +1,46 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 
 const Home = () => {
   let navigate = useNavigate()
   return (
     <div className="p-5 mt-2">
       <div className="container">
-        <div>
-          <button
-            class=" btn btn-primary btn-lg my-1"
-            onClick={() => navigate('/courses')}
-          >
-            Courses
-          </button>
+        <div
+          class="align-self-center col-md-6 text-dark d-none d-md-block "
+          id="hp-syllabus-background-img"
+        >
+          <div class="container">
+            <Link to="/syllabus">
+              <button class="btn btn-primary btn-lg my-5 ms-5 syllabus-button">
+                Syllabus
+              </button>
+            </Link>
+          </div>
         </div>
-        <div>
-          <button
-            class=" btn btn-primary btn-lg my-1"
-            onClick={() => navigate('/students')}
-          >
-            Students
-          </button>
+        <div
+          class="align-self-center col-md-6 text-dark d-none d-md-block "
+          id="hp-courses-background-img"
+        >
+          <div class="container">
+            <Link to="/courses">
+              <button class="btn btn-primary btn-lg my-5 ms-5 syllabus-button">
+                Courses
+              </button>
+            </Link>
+          </div>
         </div>
-        <div>
-          <button
-            class=" btn btn-primary btn-lg my-1"
-            onClick={() => navigate('/syllabus')}
-          >
-            Syllabus
-          </button>
+        <div
+          class="align-self-center col-md-6 text-dark d-none d-md-block "
+          id="hp-students-background-img"
+        >
+          <div class="container">
+            <Link to="/students">
+              <button class="btn btn-primary btn-lg my-5 ms-5 syllabus-button">
+                Students
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
