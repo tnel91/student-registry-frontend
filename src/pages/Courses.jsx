@@ -32,10 +32,13 @@ const Courses = () => {
     </Link>
     <section className='container'>
     {courses.map((course) => (
-        <div className='course' id={course.id} onClick={handleClick}> 
-          <h5><p className='text-info'>Course Number:</p> {course.course_number}</h5>
-          Course: {course.name} 
-          Credit Hours: {course.credit_hours} 
+        <div className='d-flex flex-column border border-success rounded m-3 p-4' id={course.id} onClick={handleClick}> 
+          <h5><span className='text-info'>Course Number:&nbsp; </span> {course.course_number}</h5>
+          <h5><span className='text-info'>Course:&nbsp; </span>{course.name}</h5>  
+          <h5><span className='text-info'>Credit Hours:&nbsp;</span>{course.credit_hours} </h5>
+          <Link to={`/courses/${course.id}`}> 
+            <button class="btn btn-info btn-lg my-5 mx-5">View Student Grades For {course.name}&nbsp;{course.course_number}</button>
+          </Link>
         </div>
         ))}
     </section>
