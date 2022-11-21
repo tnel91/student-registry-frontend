@@ -26,13 +26,17 @@ const Courses = () => {
 
 
   return (
-  <div>
+  <div className='d-flex flex-column align-items-center justify-content-center bg-dark text-light'>
     <Link to="/courses/new_course">
-    <button>Create new Course</button>
+    <button class="btn btn-info btn-lg my-5 ms-5">Create new Course</button>
     </Link>
-    <section>
+    <section className='container'>
     {courses.map((course) => (
-        <div className='course' id={course.id} onClick={handleClick}> Course: {course.name} Credit Hours: {course.credit_hours} Course Number: {course.course_number}</div>
+        <div className='course' id={course.id} onClick={handleClick}> 
+          <h5><p className='text-info'>Course Number:</p> {course.course_number}</h5>
+          Course: {course.name} 
+          Credit Hours: {course.credit_hours} 
+        </div>
         ))}
     </section>
     </div>

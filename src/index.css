@@ -33,6 +33,8 @@ height: 40rem;
 .syllabus-button{
   position: relative;
   top: 320px;
+  left: 25px;
+ 
 }
 
 .nav-link:hover{
