@@ -34,7 +34,7 @@ const Students = () => {
           )
           .then(() => {
             console.log(`Deleted student with id of ${id}`)
-            getStudentsDetails()
+            // getStudentsDetails()
           })
           .catch((error) => {
             console.log(error)

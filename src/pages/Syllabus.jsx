@@ -37,6 +37,7 @@ useEffect(() => {
             <main>
                 {syllabus?.map((course) => (
                     <Courses
+                        key={course.id}
                         id={course.id}
                         name={course.name}
                         creditHours={course.credit_hours}
