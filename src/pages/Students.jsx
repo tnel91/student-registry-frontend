@@ -4,6 +4,74 @@ import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 const Students = () => {
+
+    const [students, setStudents] = useState([])
+    const [intGrade, setIntGrade] = useState(null)
+
+    const letterGrade = {
+        4: 'A',
+        3: 'B',
+        2: 'C',
+        1: 'D',
+        0: 'F'
+    };
+  
+    useEffect(() => {
+        const getStudentsDetails = async () => {
+            const response = await axios.get(
+                `https://damp-peak-71043.herokuapp.com/school/grade/retrieve`
+            )
+            setStudents(response.data)
+            console.log(response.data)
+
+            
+        }
+        getStudentsDetails()
+    }, [])
+    
+    let gradeNum
+    // gradeNum = parseInt(document.querySelector('#intGrade').innerHTML)
+    // console.log(gradeNum)
+    
+    // useEffect(() => {
+        // const assignGrade = () => {
+        //     gradeNum = parseInt(document.querySelector('#intGrade'))
+            
+        //     console.log(gradeNum)
+     
+        //     if (gradeNum < 2){
+        //         document.getElementById('intGrade').innerText= 'F'
+        //     }
+        // }
+        //   assignGrade()
+        // },[])
+
+    return (
+        <div className='bg-dark'>
+            <Link to="/students/new_student">
+                <button>Add New Student</button>
+            </Link>
+            <section className='container'>
+                <div className='row text-light'>
+                    {students?.map((student) => (
+                        <div className='col-3 border border-success rounded wrap m-4 p-4 student-card'>
+                            <div>
+                                <h3>{student.name}</h3>
+                                <h5 className='d-flex flex-wrap email-text'> <p className='text-warning'>E-mail:</p> {student.email}</h5>
+                            </div>
+                            <div className=''>
+                                {student.student_course?.map((course) => (
+                                    <div className='d-flex flex-wrap'>                                                   
+                                        <h5>{course.name}&nbsp;&nbsp;</h5> 
+                                        <h5 className='text-info' id="intGrade">"{` ${letterGrade[Math.round(`${course.Grade.score}`)]}`}"</h5>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    ))}    
+                </div>
+            </section>
+        </div>
   const [students, setStudents] = useState([])
 
   const handleDelete = async (id) => {
@@ -23,6 +91,7 @@ const Students = () => {
   const getStudentsDetails = async () => {
     const response = await axios.get(
       `https://damp-peak-71043.herokuapp.com/school/grade/retrieve`
+
     )
     setStudents(response.data)
     console.log(response.data)
