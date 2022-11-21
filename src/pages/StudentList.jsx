@@ -7,6 +7,13 @@ const StudentList = () => {
 
 const [students, setStudents] = useState([])
 let { courseId } = useParams()
+const letterGrade = {
+  4: 'A',
+  3: 'B',
+  2: 'C',
+  1: 'D',
+  0: 'F'
+};
 
   useEffect(() => {
     const getStudents = async () => {
@@ -22,7 +29,10 @@ let { courseId } = useParams()
   return (
     <div>
       {students.course_grade.map((student) => (
-        <div className='course'> <h5>Student: {student.name} Grade: {student.Grade.score}</h5></div>
+        <div className='course'> 
+        <h5>Student: {student.name}</h5>
+        <h5 className='text-info' id="intGrade">"{` ${letterGrade[Math.round(`${student.Grade.score}`)]}`}"</h5>
+        </div>
         ))}
     </div>
   )
