@@ -27,14 +27,16 @@ const letterGrade = {
   }, [])
 
   return (
-    <div>
-      <section>
-      {students.course_grade?.map((student) => (
-        <div className='course'> 
-        <h5>Student: {student.name}</h5>
-        <h5 className='text-info' id="intGrade">"{` ${letterGrade[Math.round(`${student.Grade.score}`)]}`}"</h5>
+    <div className='bg-dark text-light studentList-bg'>
+      <section className='container p-5'>
+        <div className='row'>
+          {students.course_grade?.map((student) => (
+            <div className='col-3 border border-success rounded m-4  p-5 course studentList-card'> 
+            <h5><span className='text-secondary'>Student:&nbsp; </span> {student.name}</h5>
+            <h5 className='text-info' id="intGrade"><span className='text-warning'>Grade:&nbsp; </span> "{` ${letterGrade[Math.round(`${student.Grade.score}`)]}`}"</h5>
+            </div>
+          ))}
         </div>
-        ))}
       </section>
     </div>
   )
