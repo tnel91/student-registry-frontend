@@ -8,6 +8,7 @@ import Students from './pages/Students'
 import Courses from './pages/Courses'
 import CourseForm from './pages/CourseForm'
 import StudentForm from './pages/StudentForm'
+import StudentList from './pages/StudentList'
 function App() {
   return (
     <div className="App">
@@ -23,6 +24,7 @@ function App() {
           <Route path="/students/new_student" element={<StudentForm />} />
           <Route path="/courses" element={<Courses />} />
           <Route path="/courses/new_course" element={<CourseForm />} />
+          <Route path="/courses/:courseId" element={<StudentList />} />
         </Routes>
       </main>
     </div>
