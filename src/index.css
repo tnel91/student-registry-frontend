@@ -54,9 +54,18 @@ height: 40rem;
   min-width: 45%;
 }
 
+/* student list page */
+.studentList-bg{
+  height: 100vh;
+}
+
 
 
 @media (max-width: 992px){
+.nav-container{
+
+}
+
 .lg-sm{
   opacity: 1;
   width: 100px;
@@ -168,6 +177,15 @@ label ul {
 
 .email-text{
   font-size: 1rem;
+}
+
+/* Student List Page */
+.studentList-bg{
+  height: auto;
+}
+
+.studentList-card{
+  min-width: 90%;
 }
 
 }
