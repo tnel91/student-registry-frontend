@@ -1,7 +1,24 @@
 import React from 'react'
+import { useState, useEffect } from 'react'
+import axios from 'axios'
+
 import Courses from '../components/Courses'
 
+
 const Syllabus = () => {
+const [syllabus, setSyllabus] = useState(null)
+
+useEffect(() => {
+    const getSyllabus = async () => {
+        const response = await axios.get(
+            `https://damp-peak-71043.herokuapp.com/school/grade/retrieve`
+        )
+        setSyllabus(response.data)
+        console.log(response.data)
+        
+    }
+    getSyllabus()
+}, [])
   return ( 
     <div id="syllabus-hero">
         <div className='container'> 
@@ -18,7 +35,14 @@ const Syllabus = () => {
                 </div>
             </header>
             <main>
-                <Courses/>
+                {syllabus?.map((course) => (
+                    <Courses
+                        id={course.student_course.id}
+                        name={course.student_course.name}
+                        creditHours={course.student_course.credit_hours}
+                        courseNumber={course.student_course.course_number}
+                    />
+                ))}
             </main>
         </div>
     </div>)

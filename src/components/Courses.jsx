@@ -1,42 +1,12 @@
 import React from 'react'
 
-const Courses = () => {
+const Courses = ({id, name, creditHours, courseNumber}) => {
   return (
-  <div className="container">
+  <div className="container" key={id}>
     <div className='row border-bottom border-none'>
-      <h5 className='col-sm'>Engl 1101</h5>
-      <h5 className='col-sm'>Composition h  I</h5>
-      <h5 className='col-sm'>3</h5>
-    </div>
-    <div className='row border-bottom border-none'>
-      <h5 className='col-sm'>Engl 1101</h5>
-      <h5 className='col-sm'>Composition h  I</h5>
-      <h5 className='col-sm'>3</h5>
-    </div>
-    <div className='row border-bottom border-none'>
-      <h5 className='col-sm'>Engl 1101</h5>
-      <h5 className='col-sm'>Composition h  I</h5>
-      <h5 className='col-sm'>3</h5>
-    </div>
-    <div className='row border-bottom border-none'>
-      <h5 className='col-sm'>Engl 1101</h5>
-      <h5 className='col-sm'>Composition h  I</h5>
-      <h5 className='col-sm'>3</h5>
-    </div>
-    <div className='row border-bottom border-none'>
-      <h5 className='col-sm'>Engl 1101</h5>
-      <h5 className='col-sm'>Composition h  I</h5>
-      <h5 className='col-sm'>3</h5>
-    </div>
-    <div className='row border-bottom border-none'>
-      <h5 className='col-sm'>Engl 1101</h5>
-      <h5 className='col-sm'>Composition h  I</h5>
-      <h5 className='col-sm'>3</h5>
-    </div>
-    <div className='row border-bottom border-none'>
-      <h5 className='col-sm'>Engl 1101</h5>
-      <h5 className='col-sm'>Composition h  I</h5>
-      <h5 className='col-sm'>3</h5>
+      <h5 className='col-sm'>{courseNumber}</h5>
+      <h5 className='col-sm'>{name}</h5>
+      <h5 className='col-sm'>{creditHours}</h5>
     </div>
   </div>
   )
