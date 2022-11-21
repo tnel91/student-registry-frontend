@@ -28,12 +28,14 @@ const letterGrade = {
 
   return (
     <div>
-      {students.course_grade.map((student) => (
+      <section>
+      {students.course_grade?.map((student) => (
         <div className='course'> 
         <h5>Student: {student.name}</h5>
         <h5 className='text-info' id="intGrade">"{` ${letterGrade[Math.round(`${student.Grade.score}`)]}`}"</h5>
         </div>
         ))}
+      </section>
     </div>
   )
 }
