@@ -6,6 +6,15 @@ import axios from 'axios'
 
 const Students = () => {
     const [students, setStudents] = useState([])
+    const [intGrade, setIntGrade] = useState(null)
+
+    const letterGrade = {
+        4: 'A',
+        3: 'B',
+        2: 'C',
+        1: 'D',
+        0: 'F'
+    };
   
     useEffect(() => {
         const getStudentsDetails = async () => {
@@ -14,9 +23,28 @@ const Students = () => {
             )
             setStudents(response.data)
             console.log(response.data)
+
+            
         }
         getStudentsDetails()
     }, [])
+    
+    let gradeNum
+    // gradeNum = parseInt(document.querySelector('#intGrade').innerHTML)
+    // console.log(gradeNum)
+    
+    // useEffect(() => {
+        // const assignGrade = () => {
+        //     gradeNum = parseInt(document.querySelector('#intGrade'))
+            
+        //     console.log(gradeNum)
+     
+        //     if (gradeNum < 2){
+        //         document.getElementById('intGrade').innerText= 'F'
+        //     }
+        // }
+        //   assignGrade()
+        // },[])
 
     return (
         <div className='bg-dark'>
@@ -35,7 +63,7 @@ const Students = () => {
                                 {student.student_course?.map((course) => (
                                     <div className='d-flex flex-wrap'>                                                   
                                         <h5>{course.name}&nbsp;&nbsp;</h5> 
-                                        <h5 className='text-info'>"{course.Grade.score}"</h5>
+                                        <h5 className='text-info' id="intGrade">"{` ${letterGrade[Math.round(`${course.Grade.score}`)]}`}"</h5>
                                     </div>
                                 ))}
                             </div>
