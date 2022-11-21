@@ -5,10 +5,10 @@ const Navbar = () => {
   
     <nav className="d-flex align-items-center navbar navbar-expand-lg bg-dark  navbar-dark py-1  border-bottom border-secondary nav-container">
         <div className=" container" >
-            <Link to="/home" className="navbar-brand">
+            <Link to="/home" className="">
                 
                     <img src="https://i.imgur.com/O3umAgs.png" alt="logo" className="lg-sm invisible-sm me-4" width="50px"/>
-                    <span className='logo-text'>GA Software Engineer Bootcamp</span>
+                    <span className='logo-text '>GA Software Engineer Bootcamp</span>
 
             </Link>
             <label>
