@@ -37,6 +37,9 @@ height: 40rem;
  
 }
 
+/* Navbar */
+.navbar-brand
+
 .nav-link:hover{
   color: #0D6EFD
   ;
@@ -62,9 +65,9 @@ height: 40rem;
 
 
 @media (max-width: 992px){
-.nav-container{
+/* .nav-container{
 
-}
+} */
 
 .lg-sm{
   opacity: 1;
@@ -81,24 +84,26 @@ height: 40rem;
 
 label .menu {
   position: absolute;
-  right: -90px;
-  top: -105px;
+  right: 0px;
+  top: -115px;
   z-index: 100;
-  width: 180px;
-  height: 180px;
+  width: 70px;
+  height: 182px;
   background: #FFF;
-  border-radius: 50% 50% 50% 50%;
+  /* border-radius: 50%;  */
   -webkit-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
   box-shadow: 0 0 0 0 #FFF, 0 0 0 0 #FFF;
   cursor: pointer;
+
+  overflow: hidden;
   
 }
 
 label .hamburger {
   position: absolute;
   top: 135px;
-  left: 45px;
+  left: 20px;
   width: 30px;
   height: 2px;
   background:  #0D6EFD
