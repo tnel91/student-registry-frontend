@@ -25,6 +25,7 @@ const Students = () => {
     getStudentsDetails()
   }, [])
 
+
   const handleDelete = async (id) => {
     await axios
       .delete(

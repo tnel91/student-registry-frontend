@@ -35,7 +35,7 @@ const Landing = () => {
       <div class="align-self-center col-md-6 text-dark d-none d-md-block " id="lp-background-img">
         <div class="container">
         <Link to="/syllabus">
-          <button class="btn btn-primary btn-lg my-5 syllabus-button">
+          <button class="btn btn-primary btn-lg my-5 ms-5 syllabus-button">
               Get The Syllabus
           </button>
         </Link>
@@ -55,7 +55,7 @@ const Landing = () => {
             levels, and that are within cost and schedule requirements.
           </p>
           <Link to="/syllabus"> 
-            <button class="btn btn-primary btn-lg my-5  d-md-none">
+            <button class="btn btn-primary btn-lg my-5 ms-5  d-md-none">
               Get The Syllabus
             </button>
           </Link>
