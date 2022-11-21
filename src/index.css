@@ -21,6 +21,30 @@ height: 40rem;
   background-repeat: no-repeat;
 }
 
+#hp-syllabus-background-img{
+  background: url("https://i.imgur.com/xr5BR6J.png");
+  height: 30rem;
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#hp-courses-background-img{
+  background: url("https://i.imgur.com/xr5BR6J.png");
+  height: 30rem;
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#hp-students-background-img{
+  background: url("https://i.imgur.com/xr5BR6J.png");
+  height: 30rem;
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 #syllabus-hero{
   background-size:contain;
   background-position: center;
