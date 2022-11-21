@@ -19,7 +19,7 @@ const Students = () => {
     }, [])
 
     return (
-        <div>
+        <div className='bg-dark'>
             <Link to="/students/new_student">
                 <button>Add New Student</button>
             </Link>
@@ -27,14 +27,14 @@ const Students = () => {
                 {students?.map((student) => (
                     <div className='d-flex flex-column container bg-dark text-light py-3'>
                         <div>
-                            {student.name}
-                            {student.email}
+                            <h3>{student.name}</h3>
+                            <h5 className='d-flex'> <p className='text-warning'>E-mail:&nbsp;&nbsp;</p>{student.email}</h5>
                         </div>
-                        <div>
+                        <div className='container'>
                             {student.student_course?.map((course) => (
-                                <div >                
-                                    {course.name}  
-                                    {course.Grade}                                     
+                                <div className='d-flex'>                                                   
+                                    <h5>{course.name}&nbsp;</h5> 
+                                    <h5>{course.Grade.score}</h5>
                                 </div>
                             ))}
                         </div>
