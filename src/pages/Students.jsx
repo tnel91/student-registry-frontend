@@ -23,39 +23,25 @@ const Students = () => {
             <Link to="/students/new_student">
                 <button>Add New Student</button>
             </Link>
-            <section>
-                {students?.map((student) => (
-                    <div className='d-flex flex-column container bg-dark text-light py-3'>
-                        <div>
-                            <h3>{student.name}</h3>
-                            <h5 className='d-flex'> <p className='text-warning'>E-mail:&nbsp;&nbsp;</p>{student.email}</h5>
+            <section className='container'>
+                <div className='row text-light'>
+                    {students?.map((student) => (
+                        <div className='col-3 border border-success rounded wrap m-4 p-4 student-card'>
+                            <div>
+                                <h3>{student.name}</h3>
+                                <h5 className='d-flex flex-wrap email-text'> <p className='text-warning'>E-mail:</p> {student.email}</h5>
+                            </div>
+                            <div className=''>
+                                {student.student_course?.map((course) => (
+                                    <div className='d-flex flex-wrap'>                                                   
+                                        <h5>{course.name}&nbsp;&nbsp;</h5> 
+                                        <h5 className='text-info'>"{course.Grade.score}"</h5>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
-                        <div className='container'>
-                            {student.student_course?.map((course) => (
-                                <div className='d-flex'>                                                   
-                                    <h5>{course.name}&nbsp;</h5> 
-                                    <h5>{course.Grade.score}</h5>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                    
-                    
-                    
-                    // <StudentDetails
-                    //     id={student.id}
-                    //     name={student.name}
-                    //     email={student.email}
-                    //     studentCourses={student.student_course}   
-                    
-                    // />
-                
-                
-                
-                
-                ))}
-                
-                
+                    ))}    
+                </div>
             </section>
         </div>
     )
