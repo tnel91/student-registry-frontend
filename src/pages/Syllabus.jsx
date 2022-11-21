@@ -11,7 +11,7 @@ const [syllabus, setSyllabus] = useState(null)
 useEffect(() => {
     const getSyllabus = async () => {
         const response = await axios.get(
-            `https://damp-peak-71043.herokuapp.com/school/grade/retrieve`
+            `https://damp-peak-71043.herokuapp.com/school/course/retrieve`
         )
         setSyllabus(response.data)
         console.log(response.data)
@@ -37,10 +37,10 @@ useEffect(() => {
             <main>
                 {syllabus?.map((course) => (
                     <Courses
-                        id={course.student_course.id}
-                        name={course.student_course.name}
-                        creditHours={course.student_course.credit_hours}
-                        courseNumber={course.student_course.course_number}
+                        id={course.id}
+                        name={course.name}
+                        creditHours={course.credit_hours}
+                        courseNumber={course.course_number}
                     />
                 ))}
             </main>

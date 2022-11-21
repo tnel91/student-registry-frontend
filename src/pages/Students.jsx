@@ -3,43 +3,21 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 
-import StudentDetails from '../components/StudentDetails'
 
 const Students = () => {
     const [students, setStudents] = useState([])
-
-
-    // for(let i = 0; i < grade.length; i++){
-    //     if(grade < 62){
-    //         return (`F`)
-    //     } else if(grade >= 62 && grade < 65){
-    //         return (`D-`)
-    //     } else if(grade >= 65 && grade < 67 ){
-    //         return (`D`)
-    //     } else if(grade >= 65 && grade < 72 ){
-    //         return (`D`)
-    //     } else if(grade >= 65 && grade < 75 ){
-    //         return (`D`)
-    //     } else if(grade >= 65 && grade < 67 ){
-    //         return (`D`)
-    //     } else if(grade >= 65 && grade < 67 ){
-    //         return (`D`)
-    //     } else if(grade >= 65 && grade < 67 ){
-    //         return (`D`)
-    //     }
-    // }
   
     useEffect(() => {
-        const getStudents = async () => {
+        const getStudentsDetails = async () => {
             const response = await axios.get(
                 `https://damp-peak-71043.herokuapp.com/school/grade/retrieve`
             )
             setStudents(response.data)
             console.log(response.data)
-            
         }
-        getStudents()
+        getStudentsDetails()
     }, [])
+
     return (
         <div>
             <Link to="/students/new_student">
@@ -47,15 +25,37 @@ const Students = () => {
             </Link>
             <section>
                 {students?.map((student) => (
-                    <StudentDetails
-                        id={student.id}
-                        name={student.name}
-                        email={student.email}
-                        studentCourses={student.student_course}
-                        creditHours={student.student_course.credit_hours}
-                        courseNumber={student.student_course.course_number}
-                    />
+                    <div className='d-flex flex-column container bg-dark text-light py-3'>
+                        <div>
+                            {student.name}
+                            {student.email}
+                        </div>
+                        <div>
+                            {student.student_course?.map((course) => (
+                                <div >                
+                                    {course.name}  
+                                    {course.Grade}                                     
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    // <StudentDetails
+                    //     id={student.id}
+                    //     name={student.name}
+                    //     email={student.email}
+                    //     studentCourses={student.student_course}   
+                    
+                    // />
+                
+                
+                
+                
                 ))}
+                
+                
             </section>
         </div>
     )

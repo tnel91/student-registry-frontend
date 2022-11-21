@@ -7,7 +7,7 @@ const Navbar = () => {
         <div className=" container" >
             <Link to="/home" className="navbar-brand">
                 
-                    <img src="https://i.imgur.com/O3umAgs.png" alt="logo" class="lg-sm invisible-sm me-4" width="50px"/>
+                    <img src="https://i.imgur.com/O3umAgs.png" alt="logo" className="lg-sm invisible-sm me-4" width="50px"/>
                     <span className='logo-text'>GA Software Engineer Bootcamp</span>
 
             </Link>

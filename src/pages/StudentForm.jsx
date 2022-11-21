@@ -20,7 +20,7 @@ const StudentForm = () => {
     
     const handleSubmit = async (e) => {
     e.preventDefault()
-    axios.post(`http://localhost:3001/school/student/create`, formState)
+    axios.post(`https://damp-peak-71043.herokuapp.com/school/student/create`, formState)
     navigate(`/students`)
 
     }

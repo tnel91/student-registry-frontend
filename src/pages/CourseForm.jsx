@@ -21,7 +21,7 @@ const CourseForm = () => {
     
     const handleSubmit = async (e) => {
     e.preventDefault()
-    axios.post(`http://localhost:3001/school/course/create`, formState)
+    axios.post(`https://damp-peak-71043.herokuapp.com/school/course/create`, formState)
     navigate(`/courses`)
 
     }
