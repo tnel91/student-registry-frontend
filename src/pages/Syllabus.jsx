@@ -14,8 +14,6 @@ useEffect(() => {
             `https://damp-peak-71043.herokuapp.com/school/course/retrieve`
         )
         setSyllabus(response.data)
-        console.log(response.data)
-        
     }
     getSyllabus()
 }, [])

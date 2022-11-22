@@ -20,7 +20,6 @@ const Students = () => {
         `https://damp-peak-71043.herokuapp.com/school/grade/retrieve`
       )
       setStudents(response.data)
-      console.log(response.data)
     }
     getStudentsDetails()
   }, [])
@@ -48,7 +47,7 @@ const Students = () => {
       <section className="container">
         <div className="row text-light">
           {students?.map((student) => (
-            <div className="col-3 border border-success rounded wrap m-4 p-4 student-card">
+            <div className="col-3 border border-success rounded wrap m-4 p-4 student-card" key={student.id}>
               <div>
                 <button
                   class=" btn btn-primary btn-sm my-1"
@@ -64,7 +63,7 @@ const Students = () => {
               </div>
               <div className="">
                 {student.student_course?.map((course) => (
-                  <div className="d-flex flex-wrap">
+                  <div className="d-flex flex-wrap" key={course.id}>
                     <h5>{course.name}&nbsp;&nbsp;</h5>
                     <h5 className="text-info" id="intGrade">
                       "{` ${letterGrade[Math.round(`${course.Grade.score}`)]}`}"
