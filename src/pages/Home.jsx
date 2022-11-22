@@ -3,24 +3,19 @@ import { Link } from 'react-router-dom'
 
 const Home = () => {
   return ( 
-    <div >
-
-      <div className="row">
+    <div className='home-container bg-dark p-5'>
+      <div className="row m-4">
         <div
-          className="align-self-center col-md-6 text-dark d-none d-md-block"
+          className="align-self-center col-md-6 text-dark d-none d-md-block rounded"
           id="hp-syllabus-background-img"
         >
           <div className="container">
             <Link to="/syllabus">
-
-              <button className="btn btn-primary btn-lg my-5 ms-5">
-                Syllabus
-              </button>
-
+              <button className="btn btn-primary btn-lg my-5 ms-5">Syllabus</button>
             </Link>
           </div>
         </div>
-        <div className="col-md-6  bg-dark text-light">
+        <div className="col-md-6  bg-dark text-light border border-info rounded">
           <div className="container py-5">
             <h4 className="text-warning pt-5">Syllabus</h4>
             <p>View all available classes.</p>
@@ -32,20 +27,18 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="row">
+      <div className="row m-4">
         <div
-          className="align-self-center col-md-6 text-dark d-none d-md-block "
+          className="align-self-center col-md-6 text-dark d-none d-md-block rounded"
           id="hp-courses-background-img"
         >
           <div className="container">
             <Link to="/courses">
-
               <button className="btn btn-primary btn-lg my-5 ms-5">Courses</button>
-
             </Link>
           </div>
         </div>
-        <div className="col-md-6  bg-dark text-light">
+        <div className="col-md-6  bg-dark text-light border border-info rounded">
           <div className="container py-5">
             <h4 className="text-warning pt-5">Courses</h4>
             <p>View all courses.</p>
@@ -57,20 +50,18 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="row">
+      <div className="row m-4">
         <div
-          className="align-self-center col-md-6 text-dark d-none d-md-block "
+          className="align-self-center col-md-6 text-dark d-none d-md-block rounded"
           id="hp-students-background-img"
         >
           <div className="container">
             <Link to="/students">
-
               <button className="btn btn-primary btn-lg my-5 ms-5">Students</button>
-
             </Link>
           </div>
         </div>
-        <div className="col-md-6  bg-dark text-light">
+        <div className="col-md-6  bg-dark text-light border border-info rounded">
           <div className="container py-5">
             <h4 className="text-warning pt-5">Students</h4>
             <p>View all students.</p>

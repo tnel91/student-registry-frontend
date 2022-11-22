@@ -66,6 +66,11 @@ height: 40rem;
   height: 80rem;
 }
 
+/* Home Page */
+.home-container{
+  min-height: 100vh;
+}
+
 /* Syllabus Page */
 .syllabus-button{
   position: relative;
@@ -225,6 +230,11 @@ label ul {
 }
 
 /* Landing Page */
+
+/* home */
+.remove-border{
+border: transparent;
+}
 
 /* Students Page */
 .student-card{

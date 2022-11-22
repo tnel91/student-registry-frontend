@@ -42,7 +42,7 @@ const Students = () => {
   return (
     <div className="d-flex flex-column align-items-center justify-content-center bg-dark">
       <Link to="/students/new_student">
-        <button class=" btn btn-primary btn-lg my-5">Add New Student</button>
+        <button className=" btn btn-primary btn-lg my-5">Add New Student</button>
       </Link>
       <section className="container">
         <div className="row text-light">
