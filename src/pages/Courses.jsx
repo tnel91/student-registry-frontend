@@ -27,7 +27,7 @@ const Courses = () => {
   return (
   <div className='d-flex flex-column align-items-center justify-content-center bg-dark text-light'>
     <Link to="/courses/new_course">
-    <button class="btn btn-info btn-lg my-5 ms-5">Create new Course</button>
+    <button className="btn btn-info btn-lg my-5 ms-5">Create new Course</button>
     </Link>
     <section className='container'>
     {courses.map((course) => (
@@ -36,7 +36,7 @@ const Courses = () => {
           <h5><span className='text-info'>Course:&nbsp; </span>{course.name}</h5>  
           <h5><span className='text-info'>Credit Hours:&nbsp;</span>{course.credit_hours} </h5>
           <Link to={`/courses/${course.id}`}> 
-            <button class="btn btn-info btn-lg my-5 mx-5" onClick={handleClick}>View Student Grades For {course.name}&nbsp;{course.course_number}</button>
+            <button className="btn btn-info btn-lg my-5 mx-5" onClick={handleClick}>View Student Grades For {course.name}&nbsp;{course.course_number}</button>
           </Link>
         </div>
         ))}
