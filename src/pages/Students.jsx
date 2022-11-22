@@ -43,12 +43,12 @@ const Students = () => {
   return (
     <div className="d-flex flex-column align-items-center justify-content-center bg-dark">
       <Link to="/students/new_student">
-        <button class=" btn btn-primary btn-lg my-5">Add New Student</button>
+        <button className=" btn btn-primary btn-lg my-5">Add New Student</button>
       </Link>
       <section className="container">
         <div className="row text-light">
           {students?.map((student) => (
-            <div className="col-3 border border-success rounded wrap m-4 p-4 student-card">
+            <div className="col-3 border border-success rounded wrap m-4 p-4 student-card" key={student.id}>
               <div>
                 <button
                   className=" btn btn-danger btn-sm mb-4"
@@ -64,7 +64,7 @@ const Students = () => {
               </div>
               <div className="">
                 {student.student_course?.map((course) => (
-                  <div className="d-flex flex-wrap">
+                  <div className="d-flex flex-wrap" key={course.id}>
                     <h5>{course.name}&nbsp;&nbsp;</h5>
                     <h5 className="text-info" id="intGrade">
                       "{` ${letterGrade[Math.round(`${course.Grade.score}`)]}`}"
