@@ -26,9 +26,9 @@ const StudentForm = () => {
     }
 
     return (
-        <div>
+        <div className='d-flex justify-content-center align-items-center align-self-center m-5 p-5'>
             <form onSubmit={handleSubmit}>
-                <div className="form-group">
+                <div className="form-group p-3">
                     <label htmlFor="name">Full Name</label>
                     <input 
                     className="form-control" 
@@ -40,7 +40,7 @@ const StudentForm = () => {
                     required
                     />
                 </div>
-                <div className="form-group">
+                <div className="form-group p-3">
                     <label htmlFor="email">E-mail</label>
                     <input 
                     className="form-control" 
