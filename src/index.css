@@ -197,6 +197,7 @@ label input:checked + .menu + .nav-items-ul {
   border-radius: 0;
   color: white;
   z-index: 1;
+  text-align: center;
 }
 
 
