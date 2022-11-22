@@ -24,7 +24,7 @@ const StudentCard = (props) => {
           className=" btn btn-danger btn-sm mb-4"
           onClick={() => props.handleDelete(props.student.id)}
         >
-          Delete
+          Dropout
         </button>
         <h3>{props.student.name}</h3>
         <h5 className="d-flex flex-wrap email-text">
