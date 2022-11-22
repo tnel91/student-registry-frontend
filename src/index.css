@@ -134,6 +134,9 @@ overflow-x: none;
   margin-top: 10rem;
 }
 
+label .nav-items-ul {
+  z-index: -1;
+}
 
 label .menu {
   position: absolute;
@@ -188,18 +191,22 @@ label input { display: none; }
 
 
 
-label input:checked + .menu {
+label input:checked + .menu + .nav-items-ul {
   background: #212529;
   box-shadow: 0 0 0 100vw #212529, 0 0 0 100vh #FFF;
   border-radius: 0;
   color: white;
+  z-index: 1;
 }
+
+
 
 label input:checked + .menu .hamburger {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
   
 }
+
 
 label input:checked + .menu .hamburger:after {
   -webkit-transform: rotate(90deg);
@@ -228,6 +235,9 @@ label ul {
   -webkit-transition: .25s 0s ease-in-out;
   transition: .25s 0s ease-in-out;
 }
+
+
+
 
 /* Landing Page */
 
