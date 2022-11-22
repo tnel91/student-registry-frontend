@@ -51,7 +51,7 @@ const Students = () => {
             <div className="col-3 border border-success rounded wrap m-4 p-4 student-card">
               <div>
                 <button
-                  class=" btn btn-primary btn-sm my-1"
+                  className=" btn btn-danger btn-sm mb-4"
                   onClick={() => handleDelete(student.id)}
                 >
                   Delete
@@ -59,7 +59,7 @@ const Students = () => {
                 <h3>{student.name}</h3>
                 <h5 className="d-flex flex-wrap email-text">
                   {' '}
-                  <p className="text-warning">E-mail:</p> {student.email}
+                  <p className="text-warning">E-mail:&nbsp;</p> {student.email}
                 </h5>
               </div>
               <div className="">

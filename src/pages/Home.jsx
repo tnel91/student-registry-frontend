@@ -2,8 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const Home = () => {
-  return (
-    <div>
+  return ( 
+    <div >
+
       <div className="row">
         <div
           className="align-self-center col-md-6 text-dark d-none d-md-block"
@@ -11,9 +12,11 @@ const Home = () => {
         >
           <div className="container">
             <Link to="/syllabus">
+
               <button className="btn btn-primary btn-lg my-5 ms-5">
                 Syllabus
               </button>
+
             </Link>
           </div>
         </div>
@@ -36,9 +39,9 @@ const Home = () => {
         >
           <div className="container">
             <Link to="/courses">
-              <button className="btn btn-primary btn-lg my-5 ms-5">
-                Courses
-              </button>
+
+              <button className="btn btn-primary btn-lg my-5 ms-5">Courses</button>
+
             </Link>
           </div>
         </div>
@@ -61,9 +64,9 @@ const Home = () => {
         >
           <div className="container">
             <Link to="/students">
-              <button className="btn btn-primary btn-lg my-5 ms-5">
-                Students
-              </button>
+
+              <button className="btn btn-primary btn-lg my-5 ms-5">Students</button>
+
             </Link>
           </div>
         </div>
