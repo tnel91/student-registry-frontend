@@ -35,7 +35,7 @@ const Landing = () => {
       <section id="hero" className="bg-image shadow-2-strong"></section>
       <div className="row">
         <div
-          className="align-self-center col-md-6 text-dark d-none d-md-block "
+          className="col-md-6 d-none d-md-block text-center text-md-start"
           id="lp-background-img"
         >
           <div className="container">
@@ -46,7 +46,7 @@ const Landing = () => {
             </Link>
           </div>
         </div>
-        <div className="col-md-6 bg-dark text-light landing-info-card">
+        <div className="col-md-6 bg-dark text-light landing-info-card text-center text-md-start">
           <div className="container py-5">
             <h4 className="text-warning pt-5">Full Stack Developer</h4>
             <p>
@@ -61,7 +61,7 @@ const Landing = () => {
               and that are within cost and schedule requirements.
             </p>
             <Link to="/syllabus">
-              <button class="btn btn-primary btn-lg my-5 ms-5  d-md-none">
+              <button class="btn btn-primary btn-lg my-5 d-md-none">
                 Get The Syllabus
               </button>
             </Link>
