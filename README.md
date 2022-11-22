@@ -49,3 +49,5 @@ The purpose of this application is to dislay information about a student and the
 ##### Project Prompt: [Github](https://github.com/SEI-R-9-19/u3_interview_prep_group_hackathon)
 
 ##### Image Hosting [Imgur](https://imgur.com)
+
+##### Stack Overflow [Stack Overflow](https://stackoverflow.com/)
