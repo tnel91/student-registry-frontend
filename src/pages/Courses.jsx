@@ -36,7 +36,7 @@ const Courses = () => {
           <h5><span className='text-info'>Course:&nbsp; </span>{course.name}</h5>  
           <h5><span className='text-info'>Credit Hours:&nbsp;</span>{course.credit_hours} </h5>
           <Link to={`/courses/${course.id}`}> 
-            <button className="btn btn-info btn-lg my-5 mx-5" onClick={handleClick}>View Student Grades For {course.name}&nbsp;{course.course_number}</button>
+            <button className="btn btn-info btn-lg my-5 mx-5" onClick={handleClick}>View This Semester's Student Grades For {course.name}&nbsp;{course.course_number}</button>
           </Link>
         </div>
         ))}
