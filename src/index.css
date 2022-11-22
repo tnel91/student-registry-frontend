@@ -22,8 +22,8 @@ height: 40rem;
 }
 
 #hp-syllabus-background-img{
-  background: url("https://i.imgur.com/xr5BR6J.png");
-  height: 30rem;
+  background: rgb(112, 182, 214);
+  height: 14rem;
   background-size:cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -31,7 +31,7 @@ height: 40rem;
 
 #hp-courses-background-img{
   background: url("https://i.imgur.com/xr5BR6J.png");
-  height: 30rem;
+  height: 14rem;
   background-size:cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -39,7 +39,7 @@ height: 40rem;
 
 #hp-students-background-img{
   background: url("https://i.imgur.com/xr5BR6J.png");
-  height: 30rem;
+  height: 14rem;
   background-size:cover;
   background-position: center;
   background-repeat: no-repeat;
