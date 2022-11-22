@@ -21,7 +21,6 @@ const letterGrade = {
             `https://damp-peak-71043.herokuapp.com/school/grade/course/${courseId}`
         )
         setStudents(response.data)
-        console.log(response.data)
     }
     getStudents()
   }, [])
@@ -31,7 +30,7 @@ const letterGrade = {
       <section className='container p-5'>
         <div className='row'>
           {students.course_grade?.map((student) => (
-            <div className='col-3 border border-success rounded m-4  p-5 course studentList-card'> 
+            <div className='col-3 border border-success rounded m-4  p-5 course studentList-card' key={student.id}> 
             <h5><span className='text-secondary'>Student:&nbsp; </span> {student.name}</h5>
             <h5 className='text-info' id="intGrade"><span className='text-warning'>Grade:&nbsp; </span> "{` ${letterGrade[Math.round(`${student.Grade.score}`)]}`}"</h5>
             </div>
