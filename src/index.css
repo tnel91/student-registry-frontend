@@ -22,7 +22,7 @@ height: 40rem;
 }
 
 #hp-syllabus-background-img{
-  background: rgb(112, 182, 214);
+  background: url('https://images.unsplash.com/photo-1505685296765-3a2736de412f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
   height: 14rem;
   background-size:cover;
   background-position: center;
@@ -30,7 +30,7 @@ height: 40rem;
 }
 
 #hp-courses-background-img{
-  background: url("https://i.imgur.com/xr5BR6J.png");
+  background: url("https://images.unsplash.com/photo-1542831371-32f555c86880?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
   height: 14rem;
   background-size:cover;
   background-position: center;
@@ -38,7 +38,7 @@ height: 40rem;
 }
 
 #hp-students-background-img{
-  background: url("https://i.imgur.com/xr5BR6J.png");
+  background: url("https://images.unsplash.com/photo-1510751007277-36932aac9ebd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=737&q=80");
   height: 14rem;
   background-size:cover;
   background-position: center;
