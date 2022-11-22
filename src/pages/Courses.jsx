@@ -19,7 +19,6 @@ const Courses = () => {
             `https://damp-peak-71043.herokuapp.com/school/grade/courses`
         )
         setCourses(response.data)
-        console.log(response.data)
     }
     getCourses()
 }, [])
@@ -32,7 +31,7 @@ const Courses = () => {
     </Link>
     <section className='container'>
     {courses.map((course) => (
-        <div className='d-flex flex-column border border-success rounded m-3 p-4' id={course.id} > 
+        <div className='d-flex flex-column border border-success rounded m-3 p-4' id={course.id} key={course.id}> 
           <h5><span className='text-info'>Course Number:&nbsp; </span> {course.course_number}</h5>
           <h5><span className='text-info'>Course:&nbsp; </span>{course.name}</h5>  
           <h5><span className='text-info'>Credit Hours:&nbsp;</span>{course.credit_hours} </h5>
