@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 
 const Landing = () => {
   return (
-  <div >
+  <div className='landing-container'>
      <section
       class=" bg-dark text-light py-5 text-center text-sm-start"
     >
@@ -41,7 +41,7 @@ const Landing = () => {
         </Link>
         </div>
       </div>
-    <div class="col-md-6  bg-dark text-light">
+    <div class="col-md-6 bg-dark text-light landing-info-card">
       <div class="container py-5">
         <h4 className='text-warning pt-5'>Full Stack Developer</h4>
           <p >
