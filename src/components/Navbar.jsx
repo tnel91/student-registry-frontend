@@ -5,7 +5,7 @@ const Navbar = () => {
   
     <nav className="d-flex align-items-center navbar navbar-expand-lg bg-dark  navbar-dark border-bottom border-secondary nav-container">
         <div className=" container" >
-            <Link to="/home" className="logo-container">          
+            <Link to="/home" className="logo-container text-deco">          
                     <img src="https://i.imgur.com/O3umAgs.png" alt="logo" className="lg-sm d-block d-lg-none py-2"/>
                     <span className='logo-text navbar-brand'>GA Software Engineer Bootcamp</span>
             </Link>

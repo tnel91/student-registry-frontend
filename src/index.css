@@ -75,7 +75,9 @@ height: 40rem;
 }
 
 /* Navbar */
-.navbar-brand
+.text-deco{
+  text-decoration: none;
+}
 
 .nav-link:hover{
   color: #0D6EFD
