@@ -4,7 +4,7 @@
 
 ---
 
-#### [Frontend-Repo](https://github.com/tnel91/student-registry-frontend) | [Backend-Repo](https://github.com/tnel91/student-registry-backend) | [Trello](https://trello.com/b/BA8BnKnE/student-registry)
+#### [Frontend-Repo](https://github.com/tnel91/student-registry-frontend) | [Backend-Repo](https://github.com/tnel91/student-registry-backend) | [Trello](https://trello.com/b/BA8BnKnE/student-registry) | [Heroku](https://student-registry-app.herokuapp.com/)
 
 ---
 
@@ -33,6 +33,23 @@ The purpose of this application is to dislay information about a student and the
 - Express
 - React
 - Heroku
+- Bootstrap
+
+---
+
+### **_Getting Started_**
+
+#### _Production_
+
+- Navigate to the [Heroku Deployment](https://student-registry-app.herokuapp.com/) page.
+
+#### _Development_
+
+- `Fork` and `Clone` this repo
+- `cd` into directory
+- run `npm install`
+
+---
 
 #### _Component Hierarchy Diagram_
 
@@ -43,6 +60,32 @@ The purpose of this application is to dislay information about a student and the
 #### _Entity Relationship Diagram_
 
 ![Entity Relationship Diagram](https://i.imgur.com/l24rURBl.png)
+
+---
+
+### **_Screenshots_**
+
+#### _Landing Page_
+
+![Landing Page](https://i.imgur.com/WgQ23Ok.png)
+
+#### _Students Page_
+
+![Students Page](https://i.imgur.com/4mwDVSn.png)
+
+#### _Courses Page_
+
+![Courses Page](https://i.imgur.com/x1KCsU0.png)
+
+### **_Future Updates_**
+
+- Implement authentication
+
+  - Seperate user typess for "student" and "instructor".
+
+- Calculate GPA of each student on student page.
+
+---
 
 ### Credits
 
