@@ -2,6 +2,7 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
+import {BASE_URL} from '../globals'
 
 const StudentList = () => {
 
@@ -18,7 +19,7 @@ const letterGrade = {
   useEffect(() => {
     const getStudents = async () => {
         const response = await axios.get(
-            `https://damp-peak-71043.herokuapp.com/school/grade/course/${courseId}`
+            `${BASE_URL}/school/grade/course/${courseId}`
         )
         setStudents(response.data)
     }

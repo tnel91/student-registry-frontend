@@ -2,7 +2,7 @@ import React from 'react'
 import axios from 'axios'
 import { useState} from 'react'
 import { useNavigate} from 'react-router-dom'
-
+import {BASE_URL} from '../globals'
 
 const CourseForm = () => {
     let navigate = useNavigate()
@@ -21,7 +21,7 @@ const CourseForm = () => {
     
     const handleSubmit = async (e) => {
     e.preventDefault()
-    axios.post(`https://damp-peak-71043.herokuapp.com/school/course/create`, formState)
+    axios.post(`${BASE_URL}/school/course/create`, formState)
     navigate(`/courses`)
 
     }

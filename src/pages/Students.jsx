@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import StudentCard from '../components/StudentCard'
+import {BASE_URL} from '../globals'
 
 const Students = () => {
   const [students, setStudents] = useState([])
@@ -18,7 +19,7 @@ const Students = () => {
   useEffect(() => {
     const getStudentsDetails = async () => {
       const response = await axios.get(
-        `https://damp-peak-71043.herokuapp.com/school/grade/retrieve`
+        `${BASE_URL}/school/grade/retrieve`
       )
       setStudents(response.data)
     }
@@ -28,7 +29,7 @@ const Students = () => {
   const handleDelete = async (id) => {
     await axios
       .delete(
-        `https://damp-peak-71043.herokuapp.com/school/student/delete/${id}`
+        `${BASE_URL}/school/student/delete/${id}`
       )
       .then(() => {
         console.log(`Deleted student with id of ${id}`)

@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 
 import Courses from '../components/Courses'
+import { BASE_URL } from '../globals'
 
 
 const Syllabus = () => {
@@ -11,7 +12,7 @@ const [syllabus, setSyllabus] = useState(null)
 useEffect(() => {
     const getSyllabus = async () => {
         const response = await axios.get(
-            `https://damp-peak-71043.herokuapp.com/school/course/retrieve`
+            `${BASE_URL}/school/course/retrieve`
         )
         setSyllabus(response.data)
     }

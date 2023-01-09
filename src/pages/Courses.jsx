@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from "react-router-dom";
+import { BASE_URL } from '../globals';
 
 const Courses = () => {
 
@@ -16,7 +17,7 @@ const Courses = () => {
   useEffect(() => {
     const getCourses = async () => {
         const response = await axios.get(
-            `https://damp-peak-71043.herokuapp.com/school/grade/courses`
+            `${BASE_URL}/school/grade/courses`
         )
         setCourses(response.data)
     }
